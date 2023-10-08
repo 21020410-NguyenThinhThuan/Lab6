@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <meta name="author" content="Nguyen Thinh Thuan 21020410">
+    <title>Form</title>
+</head>
+<body>
+    <form id="form1" method="post" action="newacc.php">
+        
+        <div>
+            <label class="HangMoi">Họ tên:</label>
+            <input type="text" id="hoten" name="hoten" class="TruongBatbuoc"/>
+            <span id="loi_hoten" class="Baoloi" ></span>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">Địa chỉ:</label>
+            <input type="text" id="diachi" name="diachi" class="TruongBatbuoc"/>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">Giới tính:</label>
+            
+            <label class="radio-container">
+                <input type="radio" id="nam" name="gioitinh" checked="checked"/> Nam
+                <span class="checkmark"></span>
+                <span class="checkmark2"></span>
+            </label>
+
+            <label class="radio-container">
+                <input type="radio" id="nu" name="gioitinh"/> Nữ
+                <span class="checkmark"></span>
+                <span class="checkmark2"></span>
+            </label>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">Ngày sinh:</label>
+            <input type="text" id="ngaysinh" name="ngaysinh" placeholder="nn/tt/nnnn" class="TruongBatbuoc"/>
+            <span id="loi_ngaysinh" class="Baoloi" ></span>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">E-mail:</label>
+            <input type="text" id="email" name="email" class="TruongBatbuoc"/>
+            <span id="loi_email" class="Baoloi" ></span>
+            <br/>
+        </div>
+        <div>
+
+            <label class="HangMoi">Điện thoại:</label>
+            <input type="text" id="codinh" name="codinh" class="TruongBatbuoc"
+                onkeyup="javascript:DoKeyup(event, this, 'english');"/>
+            <br/>
+
+        </div>
+        <div>
+            <label class="HangMoi">Khóa đăng ký:</label>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="english" name="english"
+                    onkeyup="javascript:DoKeyup(event, this, 'quantri');"/> Tiếng Anh
+                <span class="checkmark"></span>
+                <span class="checkmark2"></span>
+            </label>
+            
+            <label class="checkbox-container">
+                <input type="checkbox" id="quantri" name="quantri"
+                onkeyup="javascript:DoKeyup(event, this, 'it');"/> Quản trị
+                <span class="checkmark"></span>
+                <span class="checkmark2"></span>
+            </label>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="it" name="it"
+                onkeyup="javascript:DoKeyup(event, this, 'username');"/> CNTT
+                <span class="checkmark"></span>
+                <span class="checkmark2"></span>
+            </label>
+            <br/>
+        
+        </div>
+        <div>
+            <label class="HangMoi">Tên sử dụng:</label>
+            <input type="text" id="username" name="username" class="TruongBatbuoc"
+                onkeyup="javascript:DoKeyup(event, this, 'pass');"/>
+            <span id="loi_username" class="Baoloi" ></span>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">Mật khẩu:</label>
+            <input type="password" id="pass" name="pass" class="TruongBatbuoc"
+                onkeyup="javascript:DoKeyup(event, this, 'repass');"/>
+            <span id="loi_pass" class="Baoloi"></span>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">Gõ lại mật khẩu:</label>
+            <input type="password" id="repass" name="repass" class="TruongBatbuoc"
+                onkeyup="javascript:DoKeyup(event, this, 'ghichu');"/>
+            <span id="loi_repass" class="Baoloi" ></span>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">Ghi chú:</label>
+            <textarea id="ghichu" name="ghichu" class="TruongBatbuoc"></textarea>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">&nbsp;</label>
+            <img class="preview nodisplay" src="" style="height:200px;"/>
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">Ảnh chân dung:</label>
+            <input type="file" name="FileUpload1" id="FileUpload1" accept=".png,.jpg" />
+            <br/>
+        </div>
+        <div>
+            <label class="HangMoi">&nbsp;</label>
+            <input type="button" onclick = "javascript:Chapnhan();" value="Chấp nhận"/>
+            <input type="button" onclick = "javascript:Boqua();" value="Bỏ qua"/>
+            <br/>
+        </div>
+    </form>
+    <script type="text/javascript" src="form.js"></script>
+</body>
+</html>
